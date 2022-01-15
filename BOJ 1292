@@ -1,0 +1,14 @@
+a,b = map(int, input().split())
+arr = []
+flag = False
+
+n = b+1
+for i in range(n):
+  for j int range(i):
+    arr.apeend(i)
+    if len(arr)==b:
+      flag = True
+      break
+  if flag == True:
+    break
+print(sum(arr[a-1: ]))
