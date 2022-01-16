@@ -1,0 +1,37 @@
+#1
+
+n, n_score, p = map(int,input().split())
+
+if n:
+  score = list(map(int, input().split()))
+  score.append(n_score)
+  score.sort(reverse=True)
+  idx = score.index(n_score) + 1
+
+  if idx > p:
+    print(-1)
+  else:
+    if n == p and n_score == score[-1]:
+      print(-1)
+    else:
+      print(idx)
+else:
+  print(1)
+
+"""
+#2
+
+if n == 0:
+  print(1)
+else:
+  score = list(map(int,input().split()))
+  if n == p and score[-1] >= n_score:
+    print(-1)
+  else:
+    rslt = n+1
+    for i in range(n):
+      if score[i] <= n_score:
+        rslt = i+1
+        break
+    print(rslt)
+"""
