@@ -1,0 +1,18 @@
+_in = int(input())
+collection = {}
+
+for _ in range(_in):
+  book = input()
+  if book not in collection:
+    collection[book] = 1
+  else:
+    collection[book] += 1
+
+freq = max(collection.values()) # value 리스트를 만든 후, 빈도수 최대값 반환
+
+best_seller = []
+
+for book, num in collection.items(): # key, value 쌍을 얻고 순서대로 book, num에 매치
+  if num == freq:
+    best_seller.append(book)  # 베스트셀러만 저장
+print(sorted(best_seller)[0])
