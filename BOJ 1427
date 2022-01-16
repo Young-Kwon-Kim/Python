@@ -1,0 +1,4 @@
+_in = list(map(int, input()))
+arr = list(sorted(_in, reverse=True))
+for i in range(len(arr)):
+  print(arr[i], end="")
