@@ -1,0 +1,22 @@
+def func():
+
+  l = int(input())
+  arr = sorted(map(int, input().split()))
+  n = int(input())
+
+  prev = 0
+
+  for num in arr:
+    if num == n :
+      return 0
+
+    if num > n:
+      minv = prev + 1
+      maxv = num - 1
+      break
+    prev = num
+
+  return (n - minv) * (maxv - n + 1) + (maxv - n)
+
+print(func())
+
